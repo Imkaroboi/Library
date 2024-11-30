@@ -10,9 +10,11 @@ function Book(title, author, pages, status) {
 function addBookToLibrary() {
 
 };
+const dialogDiv = document.querySelector('dialog');
 const dialog = document.getElementById('book-dialog');
 function show() {
-dialog.showModal()
+dialogDiv.style.visibility = "shown";
+dialog.showModal() 
 };
 function hide() {
     dialog.close()

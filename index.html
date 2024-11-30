@@ -13,9 +13,12 @@
       <button class="addBook" onclick="show()">+ Add Book</button>
       <div class="dialog">
         <dialog id="book-dialog">
-          <h1>Insert the book info here:</h1>
+          <h1 style="text-align: center;">Insert the book info here:</h1>
           <form>
+            <div>
+              <h2>Book Name</h2>
             <input type="text" placeholder="Book Name" />
+            </div>
             <input type="text" placeholder="Author" />
             <input type="number" placeholder="Pages" />
             <button type="submit" onclick="hide()">Submit</button>
