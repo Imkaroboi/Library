@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <div class="header">
+      <p>My Library</p>
+    </div>
+    <div class="container">
+        <div class=""> 
+      <button class="addBook" onclick="show()">+ Add Book</button>
+      <div class="dialog">
+        <dialog id="book-dialog">
+          <h1>Insert the book info here:</h1>
+          <form>
+            <input type="text" placeholder="Book Name" />
+            <input type="text" placeholder="Author" />
+            <input type="number" placeholder="Pages" />
+            <button type="submit" onclick="hide()">Submit</button>
+          </form>
+        </dialog>
+      </div>
+      </div>
+    </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
