@@ -13,15 +13,24 @@
       <button class="addBook" onclick="show()">+ Add Book</button>
       <div class="dialog">
         <dialog id="book-dialog">
-          <h1 style="text-align: center;">Insert the book info here:</h1>
-          <form>
+          <div><h1 style="text-align: center;">Insert the book info here:</h1>
+          <button id="closeButton" onclick="hide()"><img src="images/close-icon.png" id="closeImage"></button></div>
+          <form id="forms">
             <div>
               <h2>Book Name</h2>
-            <input type="text" placeholder="Book Name" />
+            <input type="text" placeholder="Book Name" id="Name"/>
             </div>
-            <input type="text" placeholder="Author" />
-            <input type="number" placeholder="Pages" />
-            <button type="submit" onclick="hide()">Submit</button>
+            <div>
+              <h2>Author</h2>
+            <input type="text" placeholder="Author" id="Author"/>
+          </div>
+          <div>  
+            <h2>Pages</h2>
+          <input type="number" placeholder="Pages" id="Pages"/>
+          <h2 style="margin-top:30px ;">Read?</h2>
+          <input type="checkbox" id="read" style="cursor: pointer;">
+          </div>
+            <button type="button" onclick="addBookToLibrary()">Submit</button>
           </form>
         </dialog>
       </div>
