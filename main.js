@@ -18,13 +18,14 @@ function addBookToLibrary() {
     myLibrary.push(newBook);
     dialog.close()
 
-    for (let i = 0; i < myLibrary.length; i++) {
-        let box = document.createElement('div');
-        container.appendChild(box);
-        let text = document.createElement('p');
-        box.appendChild(text)
-        text.textContent = author;
-    }
+    // for (let i = 0; i < myLibrary.length; i++) {
+    //     let box = document.createElement('div');
+    //     container.appendChild(box);
+    //     let text = document.createElement('p');
+    //     box.appendChild(text)
+    //     text.textContent = author;
+    // }
+    display()
 };
 
 
@@ -41,6 +42,21 @@ function hide() {
     dialog.close()
 }
 
+function display() {
+    let allBooks = document.getElementById("#totalbooks");
+    allBooks.innerHTML = ""
+    for (let i = 0; i < myLibrary.length; i++) {
+        // let box = document.createElement('div');
+        // container.appendChild(box);
+        // let text = document.createElement('p');
+        // box.appendChild(text)
+        // text.textContent = author;
+        let book = myLibrary[i];
+        let bookdiv = document.createElement("div");
+        bookdiv.innerHTML = `<p>${book.title}</p>`
+    }
+}
+display();
 // function bookItem() {
     
 
