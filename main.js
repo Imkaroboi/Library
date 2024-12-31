@@ -13,12 +13,19 @@ function display() {
     allBooks.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
         let box = document.createElement('div');
+        box.classList.add('boxes')
         totalbooks.appendChild(box);
         let book = myLibrary[i];
         box.innerHTML = `<p>${book.title}</p>`;
-        let paragraph = document.createElement('p');
-        paragraph.textContent = `${book.author}`;
-        box.appendChild(paragraph)
+        let author = document.createElement('p');
+        author.textContent = `${book.author}`;
+        box.appendChild(author)
+        let pages = document.createElement('p');
+        pages.textContent = `${book.pages}`;
+        box.appendChild(pages)
+        let bookstatus = document.createElement('p');
+        bookstatus.textContent = `${book.read}`
+        box.appendChild(bookstatus)
         console.log(myLibrary[i])
     }
 }
@@ -26,14 +33,14 @@ function addBookToLibrary() {
     let pages = document.getElementById('Pages').value;
     let name = document.getElementById('Name').value;
     let author = document.getElementById('Author').value;
-    let read = document.getElementById('read').value;
+    let read = document.getElementById('read').checked;
     let newBook = new Book(name, author, pages, read)
     myLibrary.push(newBook);
     dialog.close()
     display()
 };
 
-
+ 
 const dialogDiv = document.querySelector('dialog');
 const dialog = document.getElementById('book-dialog');
 
