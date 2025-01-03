@@ -9,7 +9,7 @@
       <p>My Library</p>
     </div>
     <div class="container">
-        <div class=""> 
+        <div class="buttondiv"> 
       <button class="addBook" onclick="show()">+ Add Book</button>
       <div class="dialog">
         <dialog id="book-dialog">
@@ -18,19 +18,19 @@
           <form id="forms">
             <div>
               <h2>Book Name</h2>
-            <input type="text" placeholder="Book Name" id="Name"/>
+            <input type="text" placeholder="Book Name" id="Name" required />
             </div>
             <div>
               <h2>Author</h2>
-            <input type="text" placeholder="Author" id="Author"/>
+            <input type="text" placeholder="Author" id="Author" required />
           </div>
           <div>  
             <h2>Pages</h2>
-          <input type="number" placeholder="Pages" id="Pages"/>
+          <input type="number" placeholder="Pages" id="Pages" required />
           <h2 style="margin-top:30px ;">Read?</h2>
           <input type="checkbox" id="read" style="cursor: pointer;">
           </div>
-            <button type="button" onclick="addBookToLibrary()">Submit</button>
+            <button type="submit" onclick="addBookToLibrary()">Submit</button>
           </form>
         </dialog>
       </div>
