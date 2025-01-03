@@ -16,16 +16,26 @@ function display() {
         box.classList.add('boxes')
         totalbooks.appendChild(box);
         let book = myLibrary[i];
-        box.innerHTML = `<p>${book.title}</p>`;
-        let author = document.createElement('p');
+        box.innerHTML = `<h2>${book.title}</h2>`;
+        let author = document.createElement('h3');
+        author.classList.add('author')
         author.textContent = `${book.author}`;
         box.appendChild(author)
         let pages = document.createElement('p');
         pages.textContent = `${book.pages}`;
         box.appendChild(pages)
         let bookstatus = document.createElement('p');
-        bookstatus.textContent = `${book.read}`
+        bookstatus.textContent = `Read:`
         box.appendChild(bookstatus)
+        let checkbox = document.createElement('input');
+        checkbox.setAttribute("type", "checkbox")
+        checkbox.checked = book.read;
+        box.appendChild(checkbox)
+        let remove = document.createElement('button');
+        remove.textContent = "Remove";
+        remove.classList.add('removeButton');
+        remove.setAttribute('onclick', 'document.querySelector(".boxes").remove(); myLibrary.pop()')
+        box.appendChild(remove)
         console.log(myLibrary[i])
     }
 }
@@ -54,12 +64,10 @@ function hide() {
     dialog.close()
 }
 
-// function bookItem() {
     
 
 
-// const form = document.getElementById('forms');
-// form.addEventListener('submit', function (e){
-//     e.preventDefault();
-//     dialog.close()
-// })}
+const form = document.getElementById('forms');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
