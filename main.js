@@ -19,7 +19,7 @@ function display() {
         box.innerHTML = `<h2>${book.title}</h2>`;
         let author = document.createElement('h3');
         author.classList.add('author')
-        author.textContent = `${book.author}`;
+        author.textContent = `by: ${book.author}`;
         box.appendChild(author)
         let pages = document.createElement('p');
         pages.textContent = `${book.pages}`;

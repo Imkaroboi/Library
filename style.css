@@ -113,12 +113,15 @@ form button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 .boxes input {
     width: 30px;
     height: 30px;
 }
-.remove {
+.removeButton {
     height: 40px;
-    width: 200px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
 }
